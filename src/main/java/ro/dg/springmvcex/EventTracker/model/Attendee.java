@@ -2,6 +2,7 @@ package ro.dg.springmvcex.EventTracker.model;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
+import ro.dg.springmvcex.EventTracker.view.Phone;
 
 import javax.validation.constraints.Size;
 
@@ -12,6 +13,9 @@ public class Attendee {
 
     @NotEmpty @Email
     private String emailAddress;
+
+    @NotEmpty @Phone
+    private String phone;
 
     public String getName() {
         return name;
@@ -27,5 +31,13 @@ public class Attendee {
 
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
